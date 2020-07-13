@@ -1,0 +1,93 @@
+.container{
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    min-height: 100vh;  
+    overflow: hidden;
+}
+
+.input-form{
+    display: flex;
+    border-radius: 50px;
+    background: var(--white-color);
+    padding: .2rem 0;
+    border: medium solid  var(--p-color);
+}
+.input-form__input{
+    border-radius: 50px;
+    padding-left: 1rem;
+    margin-right: auto;
+    flex-grow: 1;
+    border: none;
+    background:none ;
+}
+.input-form__button{
+    border-radius: 50px;
+    border: 1px solid var(--p-color);
+    border: none;
+    background:none ;
+    margin-left: .2rem;
+    cursor: pointer;
+    color: var(--p-color);
+    
+}
+.input-form__button:disabled .gps-svg .search-svg{
+    fill: var(--bg-color);
+}
+header{
+    border-bottom: 1px solid var(--p-color);
+    margin-bottom:1rem;
+    padding: 0 0 0 1rem;
+}
+header p {
+    font-weight: 600;
+    margin: 1.6rem 0;
+
+}
+h1{
+    margin: 1rem 0 0 0 ;
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+footer {
+    color: var(--p-color);
+    border-top: 1px solid var(--p-color);
+    padding-top: 16px;
+    margin-top: auto;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+.errorMsg{
+    font-weight: 700;
+}
+
+.app-bg{
+    margin: 0em;
+    padding: 0%;
+    top: 25%;
+    align-self: center;
+    width: 10rem;
+    height: 10rem;
+}
+
+.gps-svg{
+    width: 2rem;
+    height: 2rem;
+}
+
+.search-svg{
+    width: 2rem;
+    height: 2rem;
+}
+
+a{
+    text-decoration: none;
+    color: var(--p-color);
+}

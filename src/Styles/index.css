@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--p-color);
+  font-family: Arial;
+  background: var(--white-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',monospace;
+}
+
+:root{
+  --max-width:360px;
+  --white-color : #EDE9E7;
+  --bg-color:#5782A1;
+  --p-color : #302933;
+}
+
+@media(min-width:650px){
+  :root{
+    --max-width:800px;
+  }
+}
