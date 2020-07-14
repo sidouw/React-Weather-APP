@@ -10,10 +10,10 @@ const App = ()=>{
 
 const [location,setlocation] = useState('')
 const [loading,setloading] = useState(true)
-const [disableButtons,setdisableButtons] = useState(false)
+const [disableButtons,setdisableButtons] = useState(false) 
 const [Error,setError] = useState(false)
-const [WeatherData,setWeatherData] = useState([])
-const [FullweatherData,setFullweatherData]= useState()
+const [WeatherData,setWeatherData] = useState([]) //holds the array of days
+const [FullweatherData,setFullweatherData]= useState()//holds the full data that comes from the api
 
 const Locate = (e)=>{
   e.preventDefault()
@@ -72,8 +72,10 @@ return(
   <form className='input-form' onSubmit={submit}>
   <input className='input-form__input' value={location} onChange={e=>setlocation(e.target.value)} placeholder='City Name'/>
   <button disabled={disableButtons} className='input-form__button'  type="button" onClick = {Locate}>
-  <svg className='gps-svg' id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><title>Find My Location</title><path d="M256,0C138.37,0,42.67,95.7,42.67,213.33c0,158.93,193.27,289.59,201.5,295.08a21.33,21.33,0,0,0,23.67,0c8.23-5.49,201.5-136.16,201.5-295.08C469.33,95.7,373.63,0,256,0Zm0,106.67A106.67,106.67,0,1,1,149.33,213.33,106.79,106.79,0,0,1,256,106.67ZM192,213.33a64,64,0,1,1,64,64A64.07,64.07,0,0,1,192,213.33Z"/></svg></button>
-  <button disabled={disableButtons} className='input-form__button' ><svg className='search-svg'  fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px"><title>Search Location</title><path d="M 21 3 C 11.601563 3 4 10.601563 4 20 C 4 29.398438 11.601563 37 21 37 C 24.355469 37 27.460938 36.015625 30.09375 34.34375 L 42.375 46.625 L 46.625 42.375 L 34.5 30.28125 C 36.679688 27.421875 38 23.878906 38 20 C 38 10.601563 30.398438 3 21 3 Z M 21 7 C 28.199219 7 34 12.800781 34 20 C 34 27.199219 28.199219 33 21 33 C 13.800781 33 8 27.199219 8 20 C 8 12.800781 13.800781 7 21 7 Z"/></svg></button>
+  <svg
+   className='gps-svg' id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><title>Find My Location</title><path d="M256,0C138.37,0,42.67,95.7,42.67,213.33c0,158.93,193.27,289.59,201.5,295.08a21.33,21.33,0,0,0,23.67,0c8.23-5.49,201.5-136.16,201.5-295.08C469.33,95.7,373.63,0,256,0Zm0,106.67A106.67,106.67,0,1,1,149.33,213.33,106.79,106.79,0,0,1,256,106.67ZM192,213.33a64,64,0,1,1,64,64A64.07,64.07,0,0,1,192,213.33Z"/></svg></button>
+  <button disabled={disableButtons} className='input-form__button' >
+  <svg className='search-svg'  fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px"><title>Search Location</title><path d="M 21 3 C 11.601563 3 4 10.601563 4 20 C 4 29.398438 11.601563 37 21 37 C 24.355469 37 27.460938 36.015625 30.09375 34.34375 L 42.375 46.625 L 46.625 42.375 L 34.5 30.28125 C 36.679688 27.421875 38 23.878906 38 20 C 38 10.601563 30.398438 3 21 3 Z M 21 7 C 28.199219 7 34 12.800781 34 20 C 34 27.199219 28.199219 33 21 33 C 13.800781 33 8 27.199219 8 20 C 8 12.800781 13.800781 7 21 7 Z"/></svg></button>
   </form>
   {Error && <p className = 'errorMsg'>Location not Found ! Please enter a valid location</p>}
   {disableButtons&& <p>Loading .......</p>}

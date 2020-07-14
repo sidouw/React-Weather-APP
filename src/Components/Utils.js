@@ -1,5 +1,6 @@
 
-// API KEY f81d7020da47e45a50fb7073c68d6955
+// API KEY f81d7020da47e45a50fb7073c68d6955 in a real world scenarion this should be in an envirement variable
+//afetr waiting almosy two houres for the api key to be activated it didn't work with most of thr Apis so i used mapbox instead
 const getGeoWeatherData =async (long,lat)=>{
     
     const url = 'https://api.openweathermap.org/data/2.5/onecall?lat='+lat+'&lon='+long+'&exclude={minutely}&units=metric&appid=f81d7020da47e45a50fb7073c68d6955'

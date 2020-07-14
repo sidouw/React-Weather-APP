@@ -1,5 +1,4 @@
 .weather-info{
-    /* background: magenta; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -12,12 +11,11 @@
 .weather-description__icon{
     width: 3rem;
     height: 3rem;
-    background-color:   var(--comp-color);
+    background-color:   var(--bg-color);
     border-radius: 50%;
     margin-right: .4rem;
 }
 .weather-info__ilem{
-    /* background: olive; */
     width: 100%;
     margin: 0 .4rem;
 }

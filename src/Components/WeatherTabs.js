@@ -1,6 +1,6 @@
 import React from 'react'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import moment from 'moment'
+import moment from 'moment'//to convert from unix timestamps to human understandable values
 
 const WeatherTabs = ({WeatherData})=>{
     return (
